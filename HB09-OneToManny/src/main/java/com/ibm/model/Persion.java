@@ -1,10 +1,13 @@
 package com.ibm.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +29,9 @@ public class Persion {
 
 	@Column(name = "Education")
 	private String education;
+
+	@OneToMany(mappedBy = "persion")
+	private Set<Address> addresses;
 
 	public int getPersionId() {
 		return persionId;
@@ -65,6 +71,14 @@ public class Persion {
 
 	public void setEducation(String education) {
 		this.education = education;
+	}
+
+	public Set<Address> getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(Set<Address> addresses) {
+		this.addresses = addresses;
 	}
 
 }

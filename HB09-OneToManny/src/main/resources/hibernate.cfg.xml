@@ -7,7 +7,7 @@
 
 	<session-factory>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hbonetoone</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hbonetomany</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">root</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -15,8 +15,8 @@
 		<!-- <property name="hbm2ddl.auto">update</property> -->
 		<property name="hibernate.show_sql">true</property>
 
-		<mapping class="com.ibm.model.Applicant" />
-		<mapping class="com.ibm.model.Passport" />
+		<mapping class="com.ibm.model.Persion" />
+		<mapping class="com.ibm.model.Address" />
 		
 	</session-factory>
 
