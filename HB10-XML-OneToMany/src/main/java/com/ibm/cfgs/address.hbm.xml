@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ibm.model">
+	<class name="Address" table="Address101">
+		<id name="addressId" type="int">
+			<column name="Address_Id" />
+			<generator class="increment" />
+		</id>
+		<property name="street" column="Street" />
+		<property name="city" column="City" />
+		<property name="zipcode" column="Zipcode" />
+		<many-to-one name="persion" class="Persion" fetch="select">
+			<column name="Persion_Id" not-null="true" />
+		</many-to-one>
+	</class>
+</hibernate-mapping>

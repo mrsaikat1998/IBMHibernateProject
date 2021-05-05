@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.ibm.model">
+	<class name="Persion" table="Persion101">
+		<id name="persionId" type="int">
+			<column name="Address_Id" />
+			<generator class="increment" />
+		</id>
+		<property name="firstName" column="firstName" />
+		<property name="lastName" column="lastName" />
+		<property name="age" column="Age" />
+		<property name="education" column="Education" />
+
+		<set name="addresses" table="Address101" inverse="true"
+			lazy="true" fetch="select">
+			<key>
+				<column name="Persion_Id" not-null="true" />
+			</key>
+			<one-to-many class="Address" />
+		</set>
+	</class>
+</hibernate-mapping>
