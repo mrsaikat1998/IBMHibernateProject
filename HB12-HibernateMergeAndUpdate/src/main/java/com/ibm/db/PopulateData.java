@@ -72,7 +72,11 @@ public class PopulateData {
 }
 
 //get session factory object
-	// 
+	// SessionFactory factory=new Configure().Configure("employee.cfg.xml").buildSessionFactory();
 //open session
-//begin tranjection
+	//Session session=factory.opensession();
+//begin transaction
+	//Transaction tx=session.beginTranjection();
+//create the model class object and set the data by using setter method
 //store data
+	//session.save(Object obj) or session.persist(Object obj)

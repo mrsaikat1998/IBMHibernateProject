@@ -26,6 +26,18 @@ public class UpdateExample1 {
 		Transaction tx = session2.beginTransaction();
 		session2.update(employee);
 		tx.commit();
+		//session2.close();
 	}
 
 }
+//how to update project
+//get SessionFactory obect
+//open session
+//load the model class data
+	//session.get(.class filename, object id) or session.load(.class file name, object id)// note after load the data please close the session other wise update method throw exception
+//reassign the object fields for update purpose
+//then open another sesssion 
+//begin the tranjection 
+//then update the object
+	//session2.update(Object obj)
+//comitt the transaction
